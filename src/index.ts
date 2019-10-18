@@ -1,2 +1,2 @@
 export * from './condition/';
-export * from './error/'
+export * from './error/condition-error'
