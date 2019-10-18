@@ -1,0 +1,31 @@
+{
+  "name": "formn-condition-builder",
+  "version": "5.0.0",
+  "description": "Condition builder utility for Formn",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Ben Botto",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json",
+    "doc": "typedoc --options ./typedoc.js ./src",
+    "test": "ts-node ./node_modules/.bin/jasmine --config=./jasmine.json --reporter=jasmine-console-reporter",
+    "test:debug": "node --inspect-brk=0.0.0.0:9229 -r ts-node/register ./node_modules/.bin/jasmine --config=./jasmine.json --reporter=jasmine-console-reporter",
+    "clean": "rm -rf doc dist",
+    "watch:test": "chokidar --initial \"src/**/*.ts\" -c \"npm run test\"",
+    "watch:doc": "chokidar --initial \"src/**/*.ts\" -c \"npm run doc\"",
+    "prepublishOnly": "npm run test && npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "@types/jasmine": "3.x.x",
+    "chokidar-cli": "2.x.x",
+    "jasmine": "3.x.x",
+    "jasmine-console-reporter": "3.x.x",
+    "ts-node": "8.x.x",
+    "typedoc": "0.x.x"
+  },
+  "dependencies": {
+    "typescript": "3.x.x"
+  }
+}
