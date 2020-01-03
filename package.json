@@ -1,6 +1,6 @@
 {
   "name": "formn-condition-builder",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Condition builder utility for Formn",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
